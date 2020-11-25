@@ -123,7 +123,16 @@ class _MySelectionList extends StatelessWidget {
                   selectionOverlay: CupertinoPickerDefaultSelectionOverlay(background: selectionColor),
                   itemBuilder: builder,
                 ),
-                Text("Hola"),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: 
+                    Padding(
+                      padding: EdgeInsets.all(20),
+                      child:
+                        Text("Hola"), ,
+                    )
+                  ,
+                ),
               ]
             )
         ),
