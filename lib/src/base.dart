@@ -85,7 +85,7 @@ abstract class _DirectSelectBaseState<T extends _DirectSelectBase> extends State
     final RenderBox box = _key.currentContext.findRenderObject();
     final position = box.localToGlobal(Offset.zero);
     final mediaQuery = MediaQuery.of(context);
-    final half = mediaQuery.size.height / 3;
+    final half = mediaQuery.size.height / 2;
     final result = position.dy - mediaQuery.padding.top - half;
     return _MySelectionOverlay(
       key: key,
