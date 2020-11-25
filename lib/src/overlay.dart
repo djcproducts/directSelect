@@ -132,7 +132,7 @@ class _MySelectionList extends StatelessWidget {
                       child:
                         GestureDetector(
                           onTap: (){
-                            _removeOverlay();
+                            removeOverlay();
                           },
                           child: 
                             Icon(Icons.arrow_back_rounded, size: 20, color: Colors.black,),
