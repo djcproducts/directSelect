@@ -122,24 +122,7 @@ class _MySelectionList extends StatelessWidget {
                   diameterRatio: 3.0,
                   selectionOverlay: CupertinoPickerDefaultSelectionOverlay(background: selectionColor),
                   itemBuilder: builder,
-                ),
-                Align(
-                  alignment: Alignment.topCenter,
-                  child: 
-                    Container(
-                      width: double.infinity,
-                      padding: EdgeInsets.only(left: 40, right: 40, top: 10, bottom: 10),
-                      child:
-                        GestureDetector(
-                          onTap: (){
-                            
-                          },
-                          child: 
-                            Icon(Icons.arrow_back_rounded, size: 20, color: Colors.black,),
-                        )
-                    )
-                  ,
-                ),
+                )
               ]
             )
         ),
