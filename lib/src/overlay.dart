@@ -100,7 +100,6 @@ class _MySelectionList extends StatelessWidget {
     return Material(
       type: MaterialType.transparency,
       child: Container(
-        width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: NotificationListener<ScrollNotification>(
           onNotification: (scrollNotification) {
@@ -128,11 +127,16 @@ class _MySelectionList extends StatelessWidget {
                   alignment: Alignment.topCenter,
                   child: 
                     Container(
-                      color: Colors.red,
                       width: double.infinity,
-                      padding: EdgeInsets.only(left: 40, right: 40),
+                      padding: EdgeInsets.only(left: 40, right: 40, top: 10, bottom: 10),
                       child:
-                        Text("Hola"), 
+                        GestureDetector(
+                          onTap: (){
+                            _removeOverlay();
+                          },
+                          child: 
+                            Icon(Icons.arrow_back_rounded, size: 20, color: Colors.black,),
+                        )
                     )
                   ,
                 ),
