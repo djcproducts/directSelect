@@ -124,7 +124,7 @@ abstract class _DirectSelectBaseState<T extends _DirectSelectBase> extends State
         GestureDetector(
             onTap: preferTapMode ? _createOverlay : null,
             onVerticalDragStart: preferTapMode ? null : (_) => _createOverlay(),
-            onVerticalDragEnd: preferTapMode ? null : (_) => _removeOverlay(),
+            //onVerticalDragEnd: preferTapMode ? null : (_) => _removeOverlay(),
             onVerticalDragUpdate: preferTapMode ? null : (details) => _controller.hasScrollPositions ? _controller.jumpTo(_controller.offset - details.primaryDelta) : null,
             child: Container(
             	padding: EdgeInsets.all(0),
