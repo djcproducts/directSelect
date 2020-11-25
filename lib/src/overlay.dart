@@ -129,7 +129,7 @@ class _MySelectionList extends StatelessWidget {
                   child: 
                     Container(
                       width: double.infinity,
-                      padding: EdgeInsets.all(0),
+                      padding: EdgeInsets.only(left: 40),
                       child:
                         Text("Hola"), 
                     )
