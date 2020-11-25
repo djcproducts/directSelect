@@ -121,8 +121,6 @@ abstract class _DirectSelectBaseState<T extends _DirectSelectBase> extends State
   Widget build(BuildContext context) {
     final preferTapMode = widget.mode == DirectSelectMode.tap;
     return 
-      Stack(
-    children: [
         GestureDetector(
             onTap: preferTapMode ? _createOverlay : null,
             onVerticalDragStart: preferTapMode ? null : (_) => _createOverlay(),
@@ -133,10 +131,6 @@ abstract class _DirectSelectBaseState<T extends _DirectSelectBase> extends State
             	key: _key,
             	child: widget.child,
             ),
-        ),
-		Text("HOLA")
-      ],
-  )
-      ;
+        );
   }
 }
