@@ -126,8 +126,9 @@ class _MySelectionList extends StatelessWidget {
                 Align(
                   alignment: Alignment.topCenter,
                   child: 
-                    Padding(
-                      padding: EdgeInsets.all(20),
+                    Container(
+                      width: double.infinity,
+                      padding: EdgeInsets.all(0),
                       child:
                         Text("Hola"), 
                     )
