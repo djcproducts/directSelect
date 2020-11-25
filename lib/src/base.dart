@@ -98,7 +98,7 @@ abstract class _DirectSelectBaseState<T extends _DirectSelectBase> extends State
         selectionColor: widget.selectionColor,
         onItemChanged: (index) {
           if (index != null) {
-            //_currentIndex = index;
+            _currentIndex = index;
           }
         },
         onItemSelected: () {
