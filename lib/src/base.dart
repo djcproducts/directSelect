@@ -52,7 +52,7 @@ abstract class _DirectSelectBaseState<T extends _DirectSelectBase> extends State
 
   Future<void> _createOverlay();
 
-  Future<void> removeOverlay();
+  Future<void> _removeOverlay();
 
   @override
   void initState() {
