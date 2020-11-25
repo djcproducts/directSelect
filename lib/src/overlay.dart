@@ -130,7 +130,7 @@ class _MySelectionList extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.all(20),
                       child:
-                        Text("Hola"), ,
+                        Text("Hola"), 
                     )
                   ,
                 ),
