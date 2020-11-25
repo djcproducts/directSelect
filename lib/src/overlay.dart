@@ -101,7 +101,6 @@ class _MySelectionList extends StatelessWidget {
       type: MaterialType.transparency,
       child: Container(
         height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
         child: NotificationListener<ScrollNotification>(
           onNotification: (scrollNotification) {
             if (scrollNotification is ScrollEndNotification) {
@@ -125,7 +124,7 @@ class _MySelectionList extends StatelessWidget {
                   itemBuilder: builder,
                 ),
                 Align(
-                  alignment: Alignment.bottomCenter,
+                  alignment: Alignment.topCenter,
                   child: 
                     Padding(
                       padding: EdgeInsets.all(20),
