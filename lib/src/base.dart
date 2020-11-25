@@ -103,7 +103,7 @@ abstract class _DirectSelectBaseState<T extends _DirectSelectBase> extends State
         },
         onItemSelected: () {
           if (widget.mode == DirectSelectMode.tap) {
-            _removeOverlay();
+            //_removeOverlay();
           }
         },
         builder: (context, index) {
@@ -122,7 +122,7 @@ abstract class _DirectSelectBaseState<T extends _DirectSelectBase> extends State
     final preferTapMode = widget.mode == DirectSelectMode.tap;
     return 
         GestureDetector(
-            onTap: preferTapMode ? _createOverlay : null,
+            onTap: preferTapMode ? _createOverlay : _removeOverlay,
             onVerticalDragStart: preferTapMode ? null : (_) => _createOverlay(),
             //onVerticalDragEnd: preferTapMode ? null : (_) => _removeOverlay(),
             onVerticalDragUpdate: preferTapMode ? null : (details) => _controller.hasScrollPositions ? _controller.jumpTo(_controller.offset - details.primaryDelta) : null,
