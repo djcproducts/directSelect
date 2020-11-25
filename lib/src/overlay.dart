@@ -118,7 +118,7 @@ class _MySelectionList extends StatelessWidget {
                   childCount: childCount,
                   useMagnifier: true,
                   magnification: itemMagnification,
-                  onSelectedItemChanged: onItemChanged(),
+                  onSelectedItemChanged: onItemChanged,
                   diameterRatio: 3.0,
                   selectionOverlay: CupertinoPickerDefaultSelectionOverlay(background: selectionColor),
                   itemBuilder: builder,
