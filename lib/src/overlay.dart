@@ -118,6 +118,7 @@ class _MySelectionList extends StatelessWidget {
                   childCount: childCount,
                   useMagnifier: true,
                   magnification: itemMagnification,
+                  onSelectedItemChanged: onItemChanged(),
                   diameterRatio: 3.0,
                   selectionOverlay: CupertinoPickerDefaultSelectionOverlay(background: selectionColor),
                   itemBuilder: builder,
@@ -131,7 +132,7 @@ class _MySelectionList extends StatelessWidget {
                       child:
                         GestureDetector(
                           onTap: (){
-                            onItemChanged();
+                            
                           },
                           child: 
                             Icon(Icons.arrow_back_rounded, size: 20, color: Colors.black,),
