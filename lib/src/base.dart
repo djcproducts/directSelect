@@ -120,20 +120,26 @@ abstract class _DirectSelectBaseState<T extends _DirectSelectBase> extends State
   @override
   Widget build(BuildContext context) {
     final preferTapMode = widget.mode == DirectSelectMode.tap;
-    return GestureDetector(
-      onTap: preferTapMode ? _createOverlay : null,
-      onVerticalDragStart: preferTapMode ? null : (_) => _createOverlay(),
-      onVerticalDragEnd: preferTapMode ? null : (_) => _removeOverlay(),
-      onVerticalDragUpdate: preferTapMode
-          ? null
-          : (details) => _controller.hasScrollPositions
-              ? _controller.jumpTo(_controller.offset - details.primaryDelta)
-              : null,
-      child: Container(
-        padding: EdgeInsets.all(0),
-        key: _key,
-        child: widget.child,
-      ),
-    );
+    return 
+      Stack(
+            children: [
+                    GestureDetector(
+                    onTap: preferTapMode ? _createOverlay : null,
+                    onVerticalDragStart: preferTapMode ? null : (_) => _createOverlay(),
+                    onVerticalDragEnd: preferTapMode ? null : (_) => _removeOverlay(),
+                    onVerticalDragUpdate: preferTapMode
+                    ? null
+                        : (details) => _controller.hasScrollPositions
+                    ? _controller.jumpTo(_controller.offset - details.primaryDelta)
+                        : null,
+                    child: Container(
+                    padding: EdgeInsets.all(0),
+                    key: _key,
+                    child: widget.child,
+                    ),
+                    ),Text("HOLA")
+              ],
+            ]
+          );
   }
 }
