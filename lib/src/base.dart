@@ -103,7 +103,7 @@ abstract class _DirectSelectBaseState<T extends _DirectSelectBase> extends State
         },
         onItemSelected: () {
           if (widget.mode == DirectSelectMode.tap) {
-            //_removeOverlay();
+            _removeOverlay();
           }
         },
         builder: (context, index) {
