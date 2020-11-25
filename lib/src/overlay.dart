@@ -100,7 +100,7 @@ class _MySelectionList extends StatelessWidget {
     return Material(
       type: MaterialType.transparency,
       child: Container(
-        height: MediaQuery.of(context).size.height,
+        height: double.infinity,
         child: NotificationListener<ScrollNotification>(
           onNotification: (scrollNotification) {
             if (scrollNotification is ScrollEndNotification) {
