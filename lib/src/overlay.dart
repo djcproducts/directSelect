@@ -108,18 +108,24 @@ class _MySelectionList extends StatelessWidget {
             }
             return false;
           },
-          child: CupertinoPicker.builder(
-            scrollController: controller,
-            offAxisFraction: 0.0,
-            itemExtent: itemExtent,
-            childCount: childCount,
-            useMagnifier: true,
-            magnification: itemMagnification,
-            diameterRatio: 3.0,
-            onSelectedItemChanged: onItemChanged,
-            selectionOverlay: CupertinoPickerDefaultSelectionOverlay(background: selectionColor),
-            itemBuilder: builder,
-          ),
+          child: 
+            Stack(
+              children: [
+                CupertinoPicker.builder(
+                  scrollController: controller,
+                  offAxisFraction: 0.0,
+                  itemExtent: itemExtent,
+                  childCount: childCount,
+                  useMagnifier: true,
+                  magnification: itemMagnification,
+                  diameterRatio: 3.0,
+                  onSelectedItemChanged: onItemChanged,
+                  selectionOverlay: CupertinoPickerDefaultSelectionOverlay(background: selectionColor),
+                  itemBuilder: builder,
+                ),
+                Text("Hola"),
+              ]
+            )
         ),
       ),
     );
