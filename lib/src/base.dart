@@ -130,6 +130,7 @@ abstract class _DirectSelectBaseState<T extends _DirectSelectBase> extends State
               ? _controller.jumpTo(_controller.offset - details.primaryDelta)
               : null,
       child: Container(
+        color: Colors.red,
         key: _key,
         child: widget.child,
       ),
